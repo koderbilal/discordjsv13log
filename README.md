@@ -13,3 +13,8 @@ node bot.js
 
 yazarak botu çalıştırabilirsiniz.
 
+**mesaj silme**
+https://cdn.discordapp.com/attachments/840699077900369931/935550077248892988/unknown.png
+
+**mesaj değiştirme**
+https://cdn.discordapp.com/attachments/840699077900369931/935550336591097976/unknown.png
