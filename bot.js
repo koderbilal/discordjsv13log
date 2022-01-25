@@ -1,21 +1,10 @@
-// main
 
-/*
-gerekli modüller:
-npm i discord.js
-npm i fs
-npm i process
-npm i moment
-
-
-aşağıdaki token kısmı ve kanalid kısımları sizler tarafından doldurulacaktır.
-*/
 
 
 const discord = require("discord.js")
 const { Client, Intents, Collection } = require('discord.js');
 // const client = new discord.Client()
-//config = require("./config.json")
+config = require("./config.json")
 const fs = require("fs")
 const allIntents = new Intents(32509);
 allIntents.add(Intents.FLAGS.GUILD_PRESENCES, Intents.FLAGS.GUILD_MEMBERS);
@@ -35,7 +24,7 @@ client.on('ready', async () => {
 var moment = require('moment');
 
 
-client.login("token");
+client.login(config.token);
 
 
 // mesaj silme log
@@ -47,7 +36,7 @@ client.on("messageDelete", message => {
       if (message.author && message.author.bot === true) return
       if (message.channel && message.channel.type !== "GUILD_TEXT") return
       // validate if it's from a guild
-    const channel2 = client.channels.cache.get("kanalid")
+    const channel2 = client.channels.cache.get(config.mesajsil)
       const messageDeletedEmbed = new MessageEmbed()
           .setColor("RANDOM")
           .setAuthor(message.author.username, message.author.avatarURL({ dynamic: true, format: 'png', size: 1024 }))
@@ -129,7 +118,7 @@ Atılma Tarihi: ${moment(oldMessage.createdAt).locale("tr").format('LLL')}\`\`\`
           messageEditedEmbed.setThumbnail(newMessage.author.avatarURL({ dynamic: true, format: 'png', size: 1024 }))
         }
       
-      return client.channels.cache.get("kanalid").send({ 
+      return client.channels.cache.get(config.mesajdegistir).send({ 
         embeds: [messageEditedEmbed]
         })
       });
@@ -165,7 +154,7 @@ Eylem Gerçekleşme: ${moment(newState.createdAt).locale("tr").format('LLL')}\`\
       Girdiği kanalda bulunan üyeler:
       ${newState.channel.members.map(x => `${x.user} - \`${x.user.id}\``).join("\n")}
           `)   
-          return newState.guild.channels.cache.get("kanalid").send({ 
+          return newState.guild.channels.cache.get(config.kanalgir).send({ 
             embeds: [SesMicEmbed]
             })
         } 
@@ -202,7 +191,7 @@ Eylem Gerçekleşme: ${moment(oldState.createdAt).locale("tr").format('LLL')}\`\
           Çıktığı kanalda bulunan üyeler:
           ${makro}
           `)   
-          return oldState.guild.channels.cache.get("kanalid").send({ 
+          return oldState.guild.channels.cache.get(config.kanalcik).send({ 
               embeds: [SesMicEmbed]
               })
           }
@@ -249,7 +238,7 @@ ${makro}
 Yeni Kanalında Bulunan Üyeler:        
 ${newState.channel.members.map(x => `${x.user} - \`${x.user.id}\``).join("\n")}
 `)   
-          return oldState.guild.channels.cache.get("kanalid").send({ 
+          return oldState.guild.channels.cache.get(config.kanaldegistir).send({ 
               embeds: [SesMicEmbed1]
               })
   }}
