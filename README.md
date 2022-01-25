@@ -6,7 +6,7 @@ Bu projeyi çalıştırmanız için yapmanız gerekenler.
 
 npm i
 ```
-şeklinde yazdıktan sonra bot.js isimli dosyanın içindeki kanal id ve token kısımlarını doldurmanızdır. doldurduktan sonra
+şeklinde yazdıktan sonra config.json isimli dosyanın içindeki kanal id ve token kısımlarını doldurmanızdır. doldurduktan sonra
 ```bash
 node bot.js
 ```
