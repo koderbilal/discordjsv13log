@@ -13,8 +13,15 @@ node bot.js
 
 yazarak botu çalıştırabilirsiniz.
 
-**mesaj silme**
-https://cdn.discordapp.com/attachments/840699077900369931/935550077248892988/unknown.png
+<h3>Mesaj Silme<h3>
+<img src="https://cdn.discordapp.com/attachments/840699077900369931/935550077248892988/unknown.png" width="100%">
 
-**mesaj değiştirme**
-https://cdn.discordapp.com/attachments/840699077900369931/935550336591097976/unknown.png
+<h3>Mesaj Değiştirme<h3>
+<img src="https://cdn.discordapp.com/attachments/840699077900369931/935550336591097976/unknown.png" width="100%">
+
+<h3>Sesli Kanala Giriş Log<h3>
+<img src="https://cdn.discordapp.com/attachments/840699077900369931/935552958270169119/unknown.png" width="100%">
+<h3>Sesli Kanaldan Çıkış Log<h3>
+<img src="https://cdn.discordapp.com/attachments/840699077900369931/935553066172821514/unknown.png" width="100%">
+<h3>Sesli Kanal Değiştirme Log<h3>
+<img src="https://cdn.discordapp.com/attachments/840699077900369931/935553284314378270/unknown.png" width="100%">
